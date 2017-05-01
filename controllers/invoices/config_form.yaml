@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Invoice
+
+# Model Form Field configuration
+form: $/istheweb/iscorporate/models/invoice/fields.yaml
+
+# Model Class name
+modelClass: Istheweb\IsCorporate\Models\Invoice
+
+# Default redirect location
+defaultRedirect: istheweb/iscorporate/invoices
+
+# Create page
+create:
+    title: istheweb.iscorporate::lang.invoice.create_title
+    redirect: istheweb/iscorporate/invoices/update/:id
+    redirectClose: istheweb/iscorporate/invoices
+
+# Update page
+update:
+    title: istheweb.iscorporate::lang.invoice.update_title
+    redirect: istheweb/iscorporate/invoices
+    redirectClose: istheweb/iscorporate/invoices
+
+# Preview page
+preview:
+    title: istheweb.iscorporate::lang.invoice.preview_title

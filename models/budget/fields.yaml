@@ -1,0 +1,73 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+secondaryTabs:
+  fields:
+      fecha_entrega:
+          label: istheweb.iscorporate::lang.labels.delivery_date
+          type: datepicker
+          mode: date
+          span: auto
+          tab: istheweb.iscorporate::lang.tab.info
+      motivo:
+          label: istheweb.iscorporate::lang.labels.reason
+          span: auto
+          tab: istheweb.iscorporate::lang.tab.info
+      estado:
+          label: istheweb.iscorporate::lang.toolbar.status
+          type: dropdown
+          span: auto
+          placeholder: istheweb.iscorporate::lang.labels.select_status
+          tab: istheweb.iscorporate::lang.tab.info
+      client:
+          label: istheweb.iscorporate::lang.client.label
+          type: partial
+          path: field_client
+          tab: istheweb.iscorporate::lang.tab.info
+      observaciones_entrega:
+          label: istheweb.iscorporate::lang.labels.delivery_notes
+          type: richeditor
+          size: huge
+          span: auto
+          tab: istheweb.iscorporate::lang.tab.info
+      motivo_no_aceptacion:
+          label: istheweb.iscorporate::lang.labels.reason_rejected
+          type: richeditor
+          size: huge
+          span: auto
+          tab: istheweb.iscorporate::lang.tab.info
+      project_types_section@update:
+          label: istheweb.iscorporate::lang.project_type.label
+          type: section
+          #span: auto
+          comment: istheweb.iscorporate::lang.project_type.comment
+          tab: istheweb.iscorporate::lang.project.label
+      project_types@update:
+          label: istheweb.iscorporate::lang.project_types.menu_label
+          type: partial
+          path: field_project_types
+          tab: istheweb.iscorporate::lang.project.label
+      options_section@update:
+          label: istheweb.iscorporate::lang.options.menu_label
+          type: section
+          #span: auto
+          comment: istheweb.iscorporate::lang.options.comment
+          tab: istheweb.iscorporate::lang.project.label
+      options@update:
+          type: partial
+          path: field_options
+          #span: auto
+          tab: istheweb.iscorporate::lang.project.label
+      variants_section@update:
+          label: istheweb.iscorporate::lang.variants.menu_label
+          type: section
+          #span: auto
+          comment: istheweb.iscorporate::lang.variants.comment
+          tab: istheweb.iscorporate::lang.project.label
+      variants@update:
+          type: partial
+          path: field_variants
+          #span: auto
+          context: update
+          tab: istheweb.iscorporate::lang.project.label

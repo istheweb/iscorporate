@@ -1,0 +1,8 @@
+company:
+    label: Company
+    view:
+        form: $/istheweb/connect/models/company/fields.yaml
+        toolbarButtons: link|unlink|create
+    manage:
+        form: $/istheweb/connect/models/company/fields.yaml
+        list: $/istheweb/connect/models/company/columns.yaml

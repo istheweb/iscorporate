@@ -1,0 +1,28 @@
+
+<?php if(isset($values) && count($values) > 0): ?>
+    <?php $i = 0 ?>
+    <?php foreach($values as $key => $value): ?>
+        <label><?= $key ?></label>
+        <?php if(count($value) > 0): ?>
+        <select name="<?= $options[$i]->code ?>" class="form-control custom-select">
+            <option value=""><?= e(trans('istheweb.shop::lang.labels.select_option')) ?></option>
+            <?php foreach($value as $k => $v): ?>
+                <?php $isSelected = false ?>
+                <?php if(isset($variants)): ?>
+                    <?php foreach($variants as $variant): ?>
+                        <?php if($variant == $v->id): ?>
+                            <?php $isSelected = true ?>
+                            <option value="<?= $v->id ?>" selected><?= $v->value ?></option>
+                        <?php endif ?>
+                    <?php endforeach ?>
+                <?php endif ?>
+                    <?php if(!$isSelected): ?>
+                    <option value="<?= $v->id ?>"><?= $v->value ?></option>
+                <?php endif ?>
+            <?php endforeach ?>
+        </select>
+        <br/><br/>
+        <?php $i++ ?>
+        <?php endif ?>
+    <?php endforeach ?>
+<?php endif ?>

@@ -1,0 +1,17 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: istheweb.iscorporate::lang.labels.name
+        searchable: true
+    slug:
+        label: istheweb.iscorporate::lang.labels.slug
+        searchable: true
+    published_at:
+        label: istheweb.iscorporate::lang.labels.published_at
+        type: date
+    updated_at:
+        label: istheweb.iscorporate::lang.labels.updated_at
+        type: date

@@ -1,0 +1,20 @@
+<div class="control-scrollbar messages-scroll" data-control="scrollbar">
+
+    <?php if ($issue->messages->isEmpty()) : ?>
+
+    <p><?php echo e(trans('istheweb.iscorporate::lang.messages.empty')); ?></p>
+
+    <?php endif; ?>
+
+    <div id="messages-list">
+
+        <?php foreach($issue->messages as $message) : ?>
+
+        <?php echo $this->makePartial(base_path('plugins/istheweb/iscorporate/controllers/issues/message'),
+        ['message' => $message]); ?>
+
+        <?php endforeach; ?>
+
+    </div>
+
+</div>

@@ -1,0 +1,64 @@
+<div data-control="toolbar">
+
+    <div class="scoreboard">
+        <div data-control="toolbar">
+
+            <div class="scoreboard-item title-value">
+                <h4><?php echo e(trans('istheweb.iscorporate::lang.issue.open')) ?></h4>
+
+                <p><?php echo e($open); ?></p>
+            </div>
+
+            <div class="scoreboard-item title-value">
+                <h4><?php echo e(trans('istheweb.iscorporate::lang.issue.closed')) ?></h4>
+
+                <p><?php echo e($closed); ?></p>
+            </div>
+
+        </div>
+    </div>
+
+    <a href="<?= Backend::url('istheweb/iscorporate/issues/create') ?>"
+       class="btn btn-primary oc-icon-plus">
+        <?php echo e(trans('istheweb.iscorporate::lang.issue.new')) ?>
+    </a>
+
+    <button class="btn btn-default oc-icon-refresh"
+            data-request="onListRefresh"
+            data-stripe-load-indicator>
+        <?php echo e(trans('istheweb.iscorporate::lang.issue.refresh')) ?>
+    </button>
+
+    <?php if ($this->user->hasAccess('istheweb.iscorporate.access_other_issues')) : ?>
+
+    <button class="btn btn-success oc-icon-check"
+            disabled="disabled"
+            onclick="$(this).data('request-data', {
+                checked: $('.control-list').listWidget('getChecked')})"
+            data-request="onClose"
+            data-request-confirm="<?php echo e(trans('istheweb.iscorporate::lang.issue.close_selected_confirm')) ?>"
+            data-trigger-action="enable"
+            data-trigger=".control-list input[type=checkbox]"
+            data-trigger-condition="checked"
+            data-request-success="$el.prop('disabled', false)"
+            data-stripe-load-indicator>
+        <?php echo e(trans('istheweb.iscorporate::lang.issue.all_complete')) ?>
+    </button>
+
+    <button class="btn btn-danger oc-icon-trash-o"
+            disabled="disabled"
+            onclick="$(this).data('request-data', {
+                checked: $('.control-list').listWidget('getChecked')})"
+            data-request="onDelete"
+            data-request-confirm="<?php echo e(trans('istheweb.iscorporate::lang.issue.delete_selected_confirm')) ?>"
+            data-trigger-action="enable"
+            data-trigger=".control-list input[type=checkbox]"
+            data-trigger-condition="checked"
+            data-request-success="$el.prop('disabled', false)"
+            data-stripe-load-indicator>
+        <?php echo e(trans('backend::lang.list.delete_selected')) ?>
+    </button>
+
+    <?php endif; ?>
+
+</div>

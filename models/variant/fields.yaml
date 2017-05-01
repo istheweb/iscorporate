@@ -1,0 +1,145 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+secondaryTabs:
+  fields:
+      name:
+          label: istheweb.iscorporate::lang.labels.name
+          span: auto
+          tab: istheweb.iscorporate::lang.tab.info
+      code:
+          label: istheweb.iscorporate::lang.labels.code
+          type: text
+          span: auto
+          tab: istheweb.iscorporate::lang.tab.info
+      available_on:
+          label: istheweb.iscorporate::lang.labels.available_on
+          type: datepicker
+          mode: date
+          span: auto
+          tab: istheweb.iscorporate::lang.tab.info
+      available_until:
+          label: istheweb.iscorporate::lang.labels.available_until
+          type: datepicker
+          mode: date
+          span: auto
+          tab: istheweb.iscorporate::lang.tab.info
+      status:
+          label: istheweb.iscorporate::lang.fields.status
+          type: dropdown
+          span: left
+          tab: istheweb.iscorporate::lang.tab.info
+      employee_section:
+          label: istheweb.iscorporate::lang.employees.menu_label
+          type: section
+          comment: istheweb.iscorporate::lang.labels.employee_comment
+          tab: istheweb.iscorporate::lang.tab.info
+      employee:
+          type: variant_employee
+          tab: istheweb.iscorporate::lang.tab.info
+      optionSection:
+          label: istheweb.iscorporate::lang.options.menu_label
+          type: section
+          comment: istheweb.iscorporate::lang.options.comment
+          tab: istheweb.iscorporate::lang.tab.info
+      optionsValues:
+          type: project_variant_options
+          tab: istheweb.iscorporate::lang.tab.info
+      precios_section:
+          label: istheweb.iscorporate::lang.labels.prices_times
+          type: section
+          comment: istheweb.iscorporate::lang.labels.prices_section_comment
+          tab: istheweb.iscorporate::lang.tab.info
+      plazo:
+          label: istheweb.iscorporate::lang.labels.estimated_time
+          type: number
+          span: auto
+          tab: istheweb.iscorporate::lang.tab.info
+      horas:
+          label: istheweb.iscorporate::lang.labels.planified_horas
+          type: number
+          span: auto
+          tab: istheweb.iscorporate::lang.tab.info
+      pricing_calculator:
+          label: istheweb.iscorporate::lang.labels.pricing_calculator
+          span: auto
+          type: dropdown
+          tab: istheweb.iscorporate::lang.tab.info
+      price:
+          label: istheweb.iscorporate::lang.labels.price
+          type: number
+          span: auto
+          cssClass: padded
+          tab: istheweb.iscorporate::lang.tab.info
+      #reports@update:
+      #    tab: istheweb.iscorporate::lang.tab.reports
+      #    list: $/istheweb/iscorporate/models/report/columns.yaml
+      #    type: project_variant_report
+      #reports@update:
+      #    span: full
+      #    type: repeater
+      #    tab: istheweb.iscorporate::lang.tab.reports
+      #    form:
+      #        fields:
+      #            horas:
+      #                label: istheweb.iscorporate::lang.labels.hours
+      #                type: number
+      #                span: auto
+      #            minutos:
+      #                label: istheweb.iscorporate::lang.labels.minutes
+      #                type: number
+      #                span: auto
+      #            comment:
+      #                label: istheweb.iscorporate::lang.fields.comment
+      #                type: textarea
+      UrlSection:
+          label: istheweb.iscorporate::lang.labels.manage_urls
+          type: section
+          comment: istheweb.iscorporate::lang.labels.manage_urls_comment
+          tab: istheweb.iscorporate::lang.labels.other_data
+      urls:
+          span: full
+          type: repeater
+          tab: istheweb.iscorporate::lang.labels.other_data
+          form:
+              fields:
+                  name:
+                      label: istheweb.iscorporate::lang.labels.name
+                      span: auto
+                  value:
+                      label: istheweb.iscorporate::lang.fields.url
+                      span: auto
+                  username:
+                      label: istheweb.iscorporate::lang.fields.username
+                      span: auto
+                  clave:
+                      label: istheweb.iscorporate::lang.fields.password
+                      span: auto
+      dataSection:
+          label: istheweb.iscorporate::lang.labels.other_data
+          type: section
+          comment: istheweb.iscorporate::lang.labels.manage_data_comment
+          tab: istheweb.iscorporate::lang.labels.other_data
+      data:
+          span: full
+          type: repeater
+          tab: istheweb.iscorporate::lang.labels.other_data
+          form:
+              fields:
+                  name:
+                      label: istheweb.iscorporate::lang.labels.name
+                      span: auto
+                  value:
+                      label: istheweb.iscorporate::lang.fields.value
+                      span: auto
+      #optionsValues:
+          #type: partial
+          #path: field_values
+      #on_hand:
+          #label: istheweb.iscorporate::lang.labels.on_hand
+          #type: number
+          #span: auto
+      #tracked:
+          #label: istheweb.iscorporate::lang.labels.tracked
+          #type: switch

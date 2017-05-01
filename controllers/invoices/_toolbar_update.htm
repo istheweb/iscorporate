@@ -1,0 +1,51 @@
+<div class="control-toolbar">
+    <div class="toolbar-item toolbar-primary">
+        <div data-control="toolbar">
+
+            <a
+                    href="<?= Backend::url('istheweb/iscorporate/invoices') ?>"
+                    class="btn btn-default oc-icon-chevron-left">
+                <?= e(trans('istheweb.iscorporate::lang.invoices.return_to_list')) ?>
+            </a>
+
+            <?php if(!$formModel->invoice){ ?>
+            <button
+                    type="button"
+                    data-request="onGeneratePdf"
+                    data-load-indicator="<?= e(trans('backend::lang.form.saving_name', ['name'=>$formRecordName])) ?>"
+                    class="btn btn-info oc-icon-hdd-o">
+                <?= e(trans('istheweb.iscorporate::lang.budget.create_pdf')) ?>
+            </button>
+            <?php } else { ?>
+            <a class="btn btn-success oc-icon-eye" target="_blank"
+               href="<?php echo Backend::url('istheweb/iscorporate/invoices/preview/' . $formModel->id); ?>">
+                <?php echo trans('istheweb.iscorporate::lang.templates.preview'); ?></a>
+            <button
+                    type="button"
+                    data-request="onSend"
+                    data-load-indicator="<?= e(trans('backend::lang.form.saving_name', ['name'=>$formRecordName])) ?>"
+                    class="btn btn-warning oc-icon-mail-forward">
+                <?= e(trans('istheweb.iscorporate::lang.invoices.send_email')) ?>
+            </button>
+            <?php } ?>
+            <?php if($formModel->estado == 2) : ?>
+            <button
+                    type="button"
+                    data-request="onGenerateProject"
+                    data-load-indicator="<?= e(trans('backend::lang.form.saving_name', ['name'=>$formRecordName])) ?>"
+                    class="btn btn-info oc-icon-magic">
+                <?= e(trans('istheweb.iscorporate::lang.budget.create_project')) ?>
+            </button>
+            <?php endif ?>
+            <?php if($formModel->is_project_created == 1) : ?>
+            <button
+                    type="button"
+                    data-request="onGenerateInvoice"
+                    data-load-indicator="<?= e(trans('backend::lang.form.saving_name', ['name'=>$formRecordName])) ?>"
+                    class="btn btn-info oc-icon-magic">
+                <?= e(trans('istheweb.iscorporate::lang.budget.create_invoice')) ?>
+            </button>
+            <?php endif ?>
+        </div>
+    </div>
+</div>

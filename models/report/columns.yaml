@@ -1,0 +1,19 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    variant[name]:
+        label: Tarea
+    variant[employee]:
+        label: Empleado
+        type: employee_name
+    comments:
+        label: Comentario
+        type: comments_stripe_tags
+    hours:
+        label: Horas
+        select: concat(hours, ':', minutes)
+        searchable: true
+        width: 10%
+

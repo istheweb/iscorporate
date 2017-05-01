@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Role
+
+# Model Form Field configuration
+form: $/istheweb/iscorporate/models/role/fields.yaml
+
+# Model Class name
+modelClass: Istheweb\IsCorporate\Models\Role
+
+# Default redirect location
+defaultRedirect: istheweb/iscorporate/roles
+
+# Create page
+create:
+    title: istheweb.iscorporate::lang.role.create_title
+    redirect: istheweb/iscorporate/roles/update/:id
+    redirectClose: istheweb/iscorporate/roles
+
+# Update page
+update:
+    title: istheweb.iscorporate::lang.role.update_title
+    redirect: istheweb/iscorporate/roles
+    redirectClose: istheweb/iscorporate/roles
+
+# Preview page
+preview:
+    title: istheweb.iscorporate::lang.role.preview_title

@@ -1,0 +1,43 @@
+<?php if ($this->previewMode): ?>
+
+<div class="form-control">
+    <?= $value ?>
+</div>
+
+<?php else: ?>
+
+    <?php if($options): ?>
+
+        <?php foreach($options as $option): ?>
+            <label><?=$option['name'] ?></label>
+            <?php $total = 0 ?>
+            <div class="form-group checkboxlist-field">
+                <?php foreach($option['optionValues'] as $item): ?>
+                    <?php $isSelected = false ?>
+                    <div class="checkbox custom-checkbox" style="display:inline-block;">
+                        <?php if(isset($variants)): ?>
+                            <?php foreach($variants as $variant): ?>
+                                <?php if($variant == $item->id): ?>
+                                    <?php
+                                        $isSelected = true;
+                                        $total .= $item->price;
+                                    ?>
+
+                                <?php endif ?>
+                            <?php endforeach ?>
+                        <?php endif ?>
+                        <?php if(!$isSelected) : ?>
+                            <input id="Variant[optionsValues][<?= $item->id ?>]" name="Variant[optionsValues][<?= $item->id ?>]" value="<?= $item->id ?>"  type="checkbox">
+                        <?php else : ?>
+                            <input id="Variant[optionsValues][<?= $item->id ?>]" name="Variant[optionsValues][<?= $item->id ?>]" value="<?= $item->id ?>" checked  type="checkbox">
+                        <?php endif ?>
+                        <label class="choice" for="Variant[optionsValues][<?= $item->id ?>]"> <?= $item->value ?></label>
+                        <span class="help-block"><?= e(trans('istheweb.iscorporate::lang.labels.price')) ?>: <?= $item->price ?></span>
+                    </div>
+                <?php endforeach ?>
+            </div>
+
+        <?php endforeach ?>
+    <?php endif ?>
+
+<?php endif ?>

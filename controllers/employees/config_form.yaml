@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Employee
+
+# Model Form Field configuration
+form: $/istheweb/iscorporate/models/employee/fields.yaml
+
+# Model Class name
+modelClass: Istheweb\IsCorporate\Models\Employee
+
+# Default redirect location
+defaultRedirect: istheweb/iscorporate/employees
+
+# Create page
+create:
+    title: istheweb.iscorporate::lang.employee.create_title
+    redirect: istheweb/iscorporate/employees/update/:id
+    redirectClose: istheweb/iscorporate/employees
+
+# Update page
+update:
+    title: istheweb.iscorporate::lang.employee.update_title
+    redirect: istheweb/iscorporate/employees
+    redirectClose: istheweb/iscorporate/employees
+
+# Preview page
+preview:
+    title: istheweb.iscorporate::lang.employee.preview_title

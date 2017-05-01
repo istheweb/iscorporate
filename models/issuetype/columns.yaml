@@ -1,0 +1,26 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+
+    name:
+        label: istheweb.iscorporate::lang.fields.name
+        searchable: true
+
+    description:
+        label: istheweb.iscorporate::lang.fields.description
+        searchable: true
+
+    is_active:
+        label: istheweb.iscorporate::lang.fields.is_active
+        type: switch
+
+    created_at:
+        label: istheweb.iscorporate::lang.fields.created_at
+        type: datetime
+
+    updated_at:
+        label: istheweb.iscorporate::lang.fields.updated_at
+        type: datetime
+        invisible: true

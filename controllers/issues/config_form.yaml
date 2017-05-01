@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Issue
+
+# Model Form Field configuration
+form: $/istheweb/iscorporate/models/issue/fields.yaml
+
+# Model Class name
+modelClass: Istheweb\IsCorporate\Models\Issue
+
+# Default redirect location
+defaultRedirect: istheweb/iscorporate/issues
+
+# Create page
+create:
+    title: istheweb.iscorporate::lang.issue.create
+    redirect: istheweb/iscorporate/issues/update/:id
+    redirectClose: istheweb/iscorporate/issues
+
+# Update page
+update:
+    title: istheweb.iscorporate::lang.issue.update
+    redirect: istheweb/iscorporate/issues
+    redirectClose: istheweb/iscorporate/issues
+
+# Preview page
+preview:
+    title: istheweb.iscorporate::lang.issue.preview

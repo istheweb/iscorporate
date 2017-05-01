@@ -1,0 +1,14 @@
+<p>
+	<?php foreach ($model->contacts as $value): ?>
+		<span style="background-color: #FF704E; padding: 4px 8px; border-radius: 3px; margin-right: 4px; margin-bottom: 4px; color: #fff; display: inline-block; background-color: #405F74;">
+			<i class="icon-user icon-2x pull-right" style="margin-top: 4px; opacity: 0.3"></i>
+			<?= $value->name ?>
+			<small style="display: block; line-height: 14px"><?= $value->email . " - " . $value->phone ?></small>
+			<small style="display: block; line-height: 14px"><?= $value->position ? $value->position : ' - - - ' ?></small>
+		</span>
+	<?php endforeach ?>
+</p>
+
+<?php if (!count($model->contacts)): ?>
+	<p><?= trans('backend::lang.list.no_records') ?></p>
+<?php endif ?>

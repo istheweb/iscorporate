@@ -1,0 +1,19 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: istheweb.iscorporate::lang.labels.name
+        searchable: true
+    code:
+        label: istheweb.iscorporate::lang.labels.code
+        searchable: true
+    price:
+      label: istheweb.iscorporate::lang.labels.price
+    available_on:
+        label: istheweb.iscorporate::lang.labels.available_on
+        type: date
+    available_until:
+        label: istheweb.iscorporate::lang.labels.available_until
+        type: date

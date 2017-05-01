@@ -1,0 +1,56 @@
+variants:
+    label: istheweb.iscorporate::lang.variants.menu_label
+    manage:
+        form: $/istheweb/iscorporate/models/variant/fields.yaml
+        list: $/istheweb/iscorporate/models/variant/columns.yaml
+    view:
+        list: $/istheweb/iscorporate/models/variant/columns.yaml
+        toolbarButtons: create|delete
+
+options:
+    label: istheweb.iscorporate::lang.options.menu_label
+    view:
+        list: $/istheweb/iscorporate/models/projectoption/columns.yaml
+        toolbarButtons: add|remove
+    manage:
+        showSearch: true
+        recordsPerPage: 10
+        list: $/istheweb/iscorporate/models/projectoption/columns.yaml
+        form: $/istheweb/iscorporate/models/projectoption/fields.yaml
+
+project_types:
+    label: istheweb.iscorporate::lang.project_types.menu_label
+    view:
+        list: $/istheweb/iscorporate/models/projecttype/columns.yaml
+        toolbarButtons: add|remove
+    manage:
+        showSearch: true
+        recordsPerPage: 10
+        list: $/istheweb/iscorporate/models/projecttype/columns.yaml
+        form: $/istheweb/iscorporate/models/projecttype/fields.yaml
+client:
+    label: Client
+    view:
+        form: $/istheweb/iscorporate/models/client/fields.yaml
+        toolbarButtons: link|unlink|create
+    manage:
+        form: $/istheweb/iscorporate/models/client/fields.yaml
+        list: $/istheweb/iscorporate/models/client/columns.yaml
+reports:
+    label: istheweb.iscorporate::lang.tab.reports
+    manage:
+        form: $/istheweb/iscorporate/models/report/fields.yaml
+        list: $/istheweb/iscorporate/models/report/columns.yaml
+    view:
+        list: $/istheweb/iscorporate/models/report/columns.yaml
+        toolbarButtons: create|delete
+#employees:
+#    label: istheweb.iscorporate::lang.employees.menu_label
+#    view:
+#        list: $/istheweb/iscorporate/models/employee/columns.yaml
+#        toolbarButtons: add|remove
+#    manage:
+#        showSearch: true
+#        recordsPerPage: 10
+#        list: $/istheweb/iscorporate/models/employee/columns.yaml
+#        form: $/istheweb/iscorporate/models/employee/fields.yaml

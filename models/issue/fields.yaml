@@ -1,0 +1,81 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    issue_toolbar@update:
+        type: issue_toolbar
+    issue_toolbar@preview:
+        type: issue_toolbar
+
+tabs:
+    fields:
+        issue_messages@update:
+            type: issue_messages
+            tab: istheweb.iscorporate::lang.tab.messages
+
+        issue_messages@preview:
+            type: issue_messages
+            tab: istheweb.iscorporate::lang.tab.messages
+
+        reply@update:
+            tab: istheweb.iscorporate::lang.tab.messages
+            comment: istheweb.iscorporate::lang.fields.content_comment
+            type: markdown
+            size: small
+            span: right
+
+        send_btn@update:
+            tab: istheweb.iscorporate::lang.tab.messages
+            type: partial
+            path: $/istheweb/iscorporate/controllers/issues/_send_btn.htm
+
+        subject:
+            label: istheweb.iscorporate::lang.fields.subject
+            tab: istheweb.iscorporate::lang.tab.details
+            span: left
+
+        type:
+            label: istheweb.iscorporate::lang.fields.type
+            tab: istheweb.iscorporate::lang.tab.details
+            type: relation
+            nameFrom: name
+            placeholder: -- select a type of issue --
+            descriptionFrom: description
+            span: right
+
+        resource:
+            label: istheweb.iscorporate::lang.fields.resource
+            type: dropdown
+            span: auto
+            placeholder: -- select a empleado --
+            tab: istheweb.iscorporate::lang.tab.details
+
+        client:
+            label: istheweb.iscorporate::lang.fields.client
+            type: dropdown
+            span: auto
+            placeholder: -- select a cliente --
+            tab: istheweb.iscorporate::lang.tab.details
+        name_contact:
+            label: istheweb.iscorporate::lang.fields.name_contact
+            span: auto
+            tab: istheweb.iscorporate::lang.tab.details
+        surname_contact:
+            label: istheweb.iscorporate::lang.fields.surname_contact
+            span: auto
+            tab: istheweb.iscorporate::lang.tab.details
+
+        content:
+            label: istheweb.iscorporate::lang.fields.content
+            tab: istheweb.iscorporate::lang.tab.details
+            comment: istheweb.iscorporate::lang.fields.content_comment
+            type: markdown
+            size: huge
+
+        attachments:
+            label: istheweb.iscorporate::lang.fields.attachments
+            tab: istheweb.iscorporate::lang.tab.details
+            type: fileupload
+            mode: file
+            comment: istheweb.iscorporate::lang.fields.attachments_comment

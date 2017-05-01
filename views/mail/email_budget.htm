@@ -1,0 +1,109 @@
+<style type="text/css">
+    body,
+    html,
+    .body {
+        background: #f3f3f3 !important;
+    }
+    .header {
+        background: #8a8a8a;
+    }
+    .header .columns {
+        padding-bottom: 0;
+    }
+    .header p {
+        color: #fff;
+        padding-top: 15px;
+    }
+    .header .wrapper-inner {
+        padding: 20px;
+    }
+    .header .container {
+        background: transparent;
+    }
+    table.button.facebook table td {
+        background: #3B5998 !important;
+        border-color: #3B5998;
+    }
+    table.button.twitter table td {
+        background: #1daced !important;
+        border-color: #1daced;
+    }
+    table.button.google table td {
+        background: #DB4A39 !important;
+        border-color: #DB4A39;
+    }
+    .wrapper.secondary {
+        background: #f3f3f3;
+    }
+</style>
+
+<container>
+
+    <spacer size="16"></spacer>
+
+    <row>
+        <columns>
+            <h1>Presupuesto de {{ site }} de {{ subject }} </h1>
+            <p>Estimado {{ name }}. <br>
+                A continuación le presentamos el presupuesto solicitado con fecha . Estamos a su disposición para cualquier consulta o duda sobre la propuesta
+            </p>
+
+
+            <spacer size="16"></spacer>
+
+            <callout class="secondary">
+                <row>
+                    <columns large="6">
+                        <p>
+                            <strong>Su dirección de correo electrónico:</strong><br>{{ email }}
+                        </p>
+                        <p>
+                            <strong>Su Número de presupuesto:</strong><br>{{ pdfNumber }}
+                        </p>
+                    </columns>
+                    <columns large="6">
+                        <p>
+                            <strong>Dirección:</strong><br/>
+                        </p>
+                        <p>
+                            <strong>Dirección de entrega:</strong><br/>
+                        </p>
+                    </columns>
+                </row>
+            </callout>
+
+            <h4>Detalle del pedido</h4>
+
+
+
+            <table width="500px">
+                <tr style="text-align: left;"><th>Contenido</th><th>Precio</th></tr>
+
+                {% for item in items %}
+                <tr><td>{{ item.name }}</td><td>{{ item.price }}€</td></tr>
+                {% endfor %}
+
+                <tr>
+                    <td><b>Subtotal:</b></td>
+                    <td>{{ subtotal }}€</td>
+                </tr>
+                <tr>
+                    <td><b>Total:</b></td>
+                    <td>{{ total }}€</td>
+                </tr>
+            </table>
+
+            <hr/>
+
+            <h4>Recuerde:</h4>
+
+            <p>Cualquier consulta a: <a href="mailto:info@istheweb.com">info@istheweb.com</a></p>
+
+        </columns>
+    </row>
+    <row class="footer text-center">
+        <columns large="3">
+            <img src="https://istheweb.com/storage/app/media/logo.png" alt="{{ companyName }}">
+        </columns>
+    </row>
+</container>

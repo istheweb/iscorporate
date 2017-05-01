@@ -1,0 +1,44 @@
+
+<div class="scoreboard">
+    <div data-control="toolbar">
+
+        <div class="scoreboard-item title-value support-status">
+
+            <h4><?php echo e(trans('istheweb.iscorporate::lang.toolbar.status')) ?></h4>
+
+            <p><?php echo $model->getSelectedStatusName() ?></p>
+            <div class="description">
+                <?php echo $model->getSelectedNowName() ?>
+            </div>
+
+        </div>
+
+        <div class="scoreboard-item title-value">
+            <h4><?php echo e(trans('istheweb.iscorporate::lang.labels.available_until')); ?></h4>
+            <p> <?php echo $model->formatDate($model->available_until) ?></p>
+        </div>
+
+        <div class="scoreboard-item title-value">
+            <h4><?php echo e(trans('istheweb.iscorporate::lang.toolbar.total_tasks')); ?></h4>
+            <p><?=$model->variants->count() ?></p>
+        </div>
+
+        <div class="scoreboard-item title-value">
+            <h4><?php echo e(trans('istheweb.iscorporate::lang.labels.estimated_time')); ?></h4>
+            <p><?=$model->getAssignedDaysCount() ?></p>
+        </div>
+
+        <div class="scoreboard-item title-value">
+            <h4><?php echo e(trans('istheweb.iscorporate::lang.labels.planified_horas')); ?></h4>
+            <p><?=$model->getAssignedHoursCount() ?></p>
+        </div>
+
+        <div class="scoreboard-item title-value">
+            <h4><?php echo e(trans('istheweb.iscorporate::lang.toolbar.total_time_task')); ?></h4>
+            <?php $workingTime = $model->getTotalWorkingTime() ?>
+            <p><?=$workingTime[0] ?>:<?=$workingTime[1] ?> </p>
+        </div>
+
+
+    </div>
+</div>

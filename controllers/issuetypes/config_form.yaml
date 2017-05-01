@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Issue Type
+
+# Model Form Field configuration
+form: $/istheweb/iscorporate/models/issuetype/fields.yaml
+
+# Model Class name
+modelClass: Istheweb\IsCorporate\Models\IssueType
+
+# Default redirect location
+defaultRedirect: istheweb/iscorporate/issuetypes
+
+# Create page
+create:
+    title: Create Issue Type
+    redirect: istheweb/iscorporate/issuetypes/update/:id
+    redirectClose: istheweb/iscorporate/issuetypes
+
+# Update page
+update:
+    title: Edit Issue Type
+    redirect: istheweb/iscorporate/issuetypes
+    redirectClose: istheweb/iscorporate/issuetypes
+
+# Preview page
+preview:
+    title: Preview Issue Type

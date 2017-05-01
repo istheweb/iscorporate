@@ -1,0 +1,69 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+tabs:
+    defaultTab: backend::lang.user.account
+    fields:
+        user[login]:
+            span: left
+            label: backend::lang.user.login
+
+        user[email]:
+            span: right
+            label: backend::lang.user.email
+
+        user[send_invite]:
+            context: create
+            type: checkbox
+            label: backend::lang.user.send_invite
+            comment: backend::lang.user.send_invite_comment
+            default: true
+
+        user[first_name]:
+            span: left
+            label: backend::lang.user.first_name
+
+        user[last_name]:
+            span: right
+            label: backend::lang.user.last_name
+
+        user[password]:
+            type: password
+            span: left
+            label: backend::lang.user.password
+
+        user[password_confirmation]:
+            type: password
+            span: right
+            label: backend::lang.user.password_confirmation
+
+        #groups:
+        #    context: [create, update]
+        #    label: backend::lang.user.groups
+        #    commentAbove: backend::lang.user.groups_comment
+        #    type: checkboxlistpublic $bodyClass = 'compact-container';
+
+        roles_section:
+            label: istheweb.iscorporate::lang.roles.menu_label
+            type: section
+            comment: istheweb.iscorporate::lang.roles.comment
+
+        roles:
+            label: istheweb.iscorporate::lang.roles.menu_label
+            type: partial
+            path: field_roles
+            #tab: istheweb.iscorporate::lang.roles.menu_label
+
+secondaryTabs:
+    fields:
+        avatar:
+            label: backend::lang.user.avatar
+            type: fileupload
+            mode: image
+            imageHeight: 250
+            imageWidth: 250
+
+
+
+

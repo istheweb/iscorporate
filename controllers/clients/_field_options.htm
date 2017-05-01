@@ -1,0 +1,23 @@
+<?php $options = $this->vars['options'] ?>
+
+<div class="control-list">
+    <table class="table data">
+        <thead>
+        <tr>
+            <th class="sort-desc"><a href="/">Nombre</a></th>
+            <th class="active sort-asc"><a href="/">Código</a></th>
+            <th><span>Actualizado</span></th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach($options as $type) : ?>
+        <tr>
+            <td><?php echo $type->name ?></td>
+            <td><?php echo $type->code ?></td>
+            <td><?php echo $type->updated_at ?></td>
+        </tr>
+        <?php endforeach ?>
+
+        </tbody>
+    </table>
+</div>

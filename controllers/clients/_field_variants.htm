@@ -1,0 +1,27 @@
+<?php $variants = $this->vars['variants'] ?>
+
+<div class="control-list">
+    <table class="table data">
+        <thead>
+        <tr>
+            <th class="sort-desc"><a href="/">Nombre</a></th>
+            <th class="active sort-asc"><a href="/">Código</a></th>
+            <th class="sort-desc"><a href="/">Price</a></th>
+            <th class="sort-desc"><a href="/">Fecha alta</a></th>
+            <th class="sort-desc"><a href="/">Fecha entrega</a></th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach($variants as $type) : ?>
+        <tr>
+            <td><?php echo $type->name ?></td>
+            <td><?php echo $type->code ?></td>
+            <td><?php echo $type->price ?></td>
+            <td><?php echo $type->available_on ?></td>
+            <td><?php echo $type->available_until ?></td>
+        </tr>
+        <?php endforeach ?>
+
+        </tbody>
+    </table>
+</div>

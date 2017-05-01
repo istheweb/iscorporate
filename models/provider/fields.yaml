@@ -1,0 +1,9 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    company:
+        label: istheweb.iscorporate::lang.fields.company
+        type: partial
+        path: field_company

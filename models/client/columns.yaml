@@ -1,0 +1,23 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    company[name]:
+        label: istheweb.iscorporate::lang.fields.company
+        searchable: true
+    company[email]:
+        label: istheweb.iscorporate::lang.labels.email
+        searchable: true
+    company[address]:
+        label: istheweb.iscorporate::lang.labels.address
+        searchable: true
+    company[state]:
+        label: istheweb.iscorporate::lang.fields.state
+        searchable: true
+    company[city]:
+        label: istheweb.iscorporate::lang.labels.city
+        searchable: true
+    company[phone]:
+        label: istheweb.iscorporate::lang.labels.phone
+        searchable: true

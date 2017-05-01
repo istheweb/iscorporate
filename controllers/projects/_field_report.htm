@@ -1,0 +1,11 @@
+<div class="field-section">
+    <h4><?php echo e(trans('istheweb.iscorporate::lang.tab.reports')); ?></h4>
+    <p class="help-block"><?php echo e(trans('istheweb.iscorporate::lang.tab.reports_comment')); ?></p>
+
+</div>
+<?php if($model->isAllowedToUpdate('update')) : ?>
+
+    <?= $this->relationRender('reports') ?>
+<?php else : ?>
+    <?= $this->relationRender('reports', ['readOnly' => true]) ?>
+<?php endif ?>

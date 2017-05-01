@@ -1,0 +1,24 @@
+company:
+    label: istheweb.connect::lang.company.menu_label
+    view:
+        form: $/istheweb/connect/models/company/fields.yaml
+        toolbarButtons: link|unlink|create
+    manage:
+        form: $/istheweb/connect/models/company/fields.yaml
+        list: $/istheweb/connect/models/company/columns.yaml
+budgets:
+    label: istheweb.iscorporate::lang.budget.menu_label
+    manage:
+        form: $/istheweb/iscorporate/models/budget/fields.yaml
+        list: $/istheweb/iscorporate/models/budget/columns.yaml
+    view:
+        list: $/istheweb/iscorporate/models/budget/columns.yaml
+        toolbarButtons: add|remove
+projects:
+    label: istheweb.iscorporate::lang.project.menu_label
+    manage:
+        form: $/istheweb/iscorporate/models/project/fields.yaml
+        list: $/istheweb/iscorporate/models/project/columns.yaml
+    view:
+        list: $/istheweb/iscorporate/models/project/columns.yaml
+        toolbarButtons: add|remove

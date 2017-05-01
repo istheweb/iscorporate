@@ -1,0 +1,27 @@
+<div class="scoreboard">
+    <div data-control="toolbar">
+
+        <div class="scoreboard-item control-chart" data-control="chart-pie">
+            <ul>
+                <li data-color="#95b753"><?=e(trans('istheweb.iscorporate::lang.budget_state.requested')) ?> <span><?=$this->vars['scores'][0] ?></span></li>
+                <li data-color="#e5a91a"><?=e(trans('istheweb.iscorporate::lang.budget_state.acepted')) ?>  <span><?=$this->vars['scores'][1] ?></span></li>
+                <li data-color="#cc3300"><?=e(trans('istheweb.iscorporate::lang.budget_state.rejected')) ?>  <span><?=$this->vars['scores'][2] ?></span></li>
+            </ul>
+        </div>
+
+        <div class="scoreboard-item control-chart" data-control="chart-bar">
+            <ul>
+                <li data-color="#95b753"><?=e(trans('istheweb.iscorporate::lang.budget_state.delivered')) ?> <span><?=$this->vars['scores'][3] ?></span></li>
+                <li data-color="#e5a91a"><?=e(trans('istheweb.iscorporate::lang.budget_state.contacted')) ?> <span><?=$this->vars['scores'][4] ?></span></li>
+                <li data-color="#cc3300"><?=e(trans('istheweb.iscorporate::lang.budget_state.lowcost')) ?> <span><?=$this->vars['scores'][5] ?></span></li>
+            </ul>
+        </div>
+
+        <div class="scoreboard-item title-value">
+            <h4><?=e(trans('istheweb.iscorporate::lang.toolbar.total_budgets')) ?></h4>
+            <p><?= $this->vars['total'] ?></p>
+            <p class="description"></p>
+        </div>
+
+    </div>
+</div>

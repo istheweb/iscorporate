@@ -1,0 +1,22 @@
+1.0.1: First version of IsCorporate
+1.0.2:
+  - Create Models
+  - create_employees_table.php
+  - create_roles_table.php
+  - create_clients_table.php
+  - create_providers_table.php
+  - create_budgets_table.php
+  - create_option_values_table.php
+  - create_project_types_table.php
+  - create_project_options_table.php
+  - create_projects_table.php
+  - create_variants_table.php
+  - create_issues_table.php
+  - create_issue_messages_table.php
+  - create_issue_statuses_table.php
+  - create_issue_types_table.php
+  - create_reports_table.php
+  - create_invoices_table.php
+  - create_pivots_table.php
+  - seed_tables.php
+

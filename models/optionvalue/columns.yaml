@@ -1,0 +1,15 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    value:
+        label: istheweb.iscorporate::lang.labels.value
+        searchable: true
+    code:
+        label: istheweb.iscorporate::lang.labels.code
+        searchable: true
+    price:
+        label: istheweb.iscorporate::lang.labels.price
+        searchable: true
+

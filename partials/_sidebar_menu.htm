@@ -1,0 +1,64 @@
+<style>
+    .counter {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        padding: 2px 6px 3px 4px;
+        background-color: #d9350f;
+        color: #ffffff;
+        font-size: 11px;
+        line-height: 100%;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        opacity: 1;
+        filter: alpha(opacity=100);
+        -webkit-transform: scale(1,);
+        -ms-transform: scale(1,);
+        transform: scale(1,);
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+</style>
+
+<?php
+    $sideMenuItems = BackendMenu::listSideMenuItems();
+    if ($sideMenuItems):
+        $collapsedGroups = explode('|',
+    isset($_COOKIE['sidenav_treegroupStatus']) ? $_COOKIE['sidenav_treegroupStatus'] : null);
+    $categories = [];
+    foreach ($sideMenuItems as $sideItemCode => $item){
+            if(!property_exists($item, 'group'))
+                $item->group = 'default';
+            if(!property_exists($item, 'keywords'))
+                $item->keywords = '';
+            if(!property_exists($item, 'description'))
+                $item->description = '';
+            $categories[$item->group][$sideItemCode] = $item;
+        }
+?>
+<ul class="top-level">
+    <?php foreach ($categories as $category => $items):
+        $collapsed = in_array($category, $collapsedGroups);
+    ?>
+    <li data-group-code="<?= e($category) ?>" <?= $collapsed ? 'data-status="collapsed"' : null ?>>
+    <div class="group">
+        <h3><?= e(trans($category)) ?></h3>
+    </div>
+    <ul>
+        <?php foreach ($items as $item): ?>
+        <li class="<?= BackendMenu::isSideMenuItemActive($item) ? 'active' : null ?>"
+            data-keywords="<?= e(trans($item->keywords)) ?>">
+            <a href="<?= $item->url ?>">
+                <i class="<?= $item->icon ?>"></i>
+                <span class="header"><?= e(trans($item->label)) ?> <?php if($item->counter) : ?> <span class="counter" ><?=$item->counter ?> <?php endif ?></span></span>
+                <span class="description"><?= e(trans($item->description)) ?></span>
+            </a>
+        </li>
+        <?php endforeach ?>
+    </ul>
+    </li>
+    <?php endforeach ?>
+</ul>
+<?php endif; ?>

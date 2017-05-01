@@ -1,0 +1,20 @@
+subject = "New reply to '{{ issue.subject }}'"
+==
+
+Hello {{ name }},
+
+there is a new reply for your issue #{{ issue.id }}.
+
+{{ issue.subject }}
+
+{{ reply|md|striptags }}
+
+==
+
+<p>Hello {{ name }},</p>
+
+<p>there is a new reply for issue <a href="{{ url }}">#{{ issue.id }}</a>.</p>
+
+<hr>
+
+<p>{{ reply|md|raw }}</p>

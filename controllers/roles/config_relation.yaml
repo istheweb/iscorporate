@@ -1,0 +1,10 @@
+employees:
+    label: Employees
+    view:
+        list: $/istheweb/iscorporate/models/employee/columns.yaml
+        toolbarButtons: add|remove
+    manage:
+        showSearch: true
+        recordsPerPage: 10
+        list: $/istheweb/iscorporate/models/employee/columns.yaml
+        form: $/istheweb/iscorporate/models/employee/fields.yaml

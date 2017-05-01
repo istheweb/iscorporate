@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Report
+
+# Model Form Field configuration
+form: $/istheweb/iscorporate/models/report/fields.yaml
+
+# Model Class name
+modelClass: Istheweb\IsCorporate\Models\Report
+
+# Default redirect location
+defaultRedirect: istheweb/iscorporate/reports
+
+# Create page
+create:
+    title: Create Report
+    redirect: istheweb/iscorporate/reports/update/:id
+    redirectClose: istheweb/iscorporate/reports
+
+# Update page
+update:
+    title: Edit Report
+    redirect: istheweb/iscorporate/reports
+    redirectClose: istheweb/iscorporate/reports
+
+# Preview page
+preview:
+    title: Preview Report

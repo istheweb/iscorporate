@@ -1,0 +1,26 @@
+<?php $project_types = $this->vars['project_types'] ?>
+
+<div class="control-list">
+    <table class="table data">
+        <thead>
+        <tr>
+            <th class="sort-desc"><a href="/">Nombre</a></th>
+            <th class="active sort-asc"><a href="/">Slug</a></th>
+            <th><span>Publicado</span></th>
+            <th><span>Actualizado</span></th>
+            <th class="list-setup"><a href="/" title="List options"></a></th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach($project_types as $type) : ?>
+            <tr>
+                <td><?php echo $type->name ?></td>
+                <td><?php echo $type->slug ?></td>
+                <td><?php echo $type->published_at ?></td>
+                <td><?php echo $type->updated_at ?></td>
+            </tr>
+        <?php endforeach ?>
+
+        </tbody>
+    </table>
+</div>

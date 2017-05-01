@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Project Option
+
+# Model Form Field configuration
+form: $/istheweb/iscorporate/models/projectoption/fields.yaml
+
+# Model Class name
+modelClass: Istheweb\IsCorporate\Models\ProjectOption
+
+# Default redirect location
+defaultRedirect: istheweb/iscorporate/projectoptions
+
+# Create page
+create:
+    title: istheweb.iscorporate::lang.option.create_title
+    redirect: istheweb/iscorporate/projectoptions/update/:id
+    redirectClose: istheweb/iscorporate/projectoptions
+
+# Update page
+update:
+    title: istheweb.iscorporate::lang.option.update_title
+    redirect: istheweb/iscorporate/projectoptions
+    redirectClose: istheweb/iscorporate/projectoptions
+
+# Preview page
+preview:
+    title: istheweb.iscorporate::lang.option.preview_title

@@ -1,0 +1,94 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+secondaryTabs:
+  fields:
+      budget:
+          label: istheweb.iscorporate::lang.budget.label
+          type: partial
+          path: field_budget
+          tab: istheweb.iscorporate::lang.tab.info
+      dates_section:
+          label: istheweb.iscorporate::lang.fields.dates_states
+          comment: istheweb.iscorporate::lang.fields.dates_states_comment
+          type: section
+          tab: istheweb.iscorporate::lang.tab.info
+      invoice_date:
+          label: istheweb.iscorporate::lang.labels.invoice_date
+          type: datepicker
+          mode: date
+          span: auto
+          tab: istheweb.iscorporate::lang.tab.info
+      vto_date:
+          label: istheweb.iscorporate::lang.labels.vto_date
+          type: datepicker
+          mode: date
+          span: auto
+          tab: istheweb.iscorporate::lang.tab.info
+      send_date:
+          label: istheweb.iscorporate::lang.labels.send_date
+          type: datepicker
+          mode: date
+          span: auto
+          tab: istheweb.iscorporate::lang.tab.info
+      payment_section:
+          label: istheweb.iscorporate::lang.fields.invoicing
+          type: section
+          comment: istheweb.iscorporate::lang.labels.invoicing_comment
+          tab: istheweb.iscorporate::lang.tab.info
+      payment_type:
+          label: istheweb.iscorporate::lang.labels.payment_type
+          type: dropdown
+          span: auto
+          placeholder: istheweb.iscorporate::lang.labels.select_payment_type
+          tab: istheweb.iscorporate::lang.tab.info
+      status:
+          label: istheweb.iscorporate::lang.fields.status
+          type: dropdown
+          span: auto
+          placeholder: istheweb.iscorporate::lang.labels.select_status
+          tab: istheweb.iscorporate::lang.tab.info
+      taxable_base:
+          label: istheweb.iscorporate::lang.labels.taxable_base
+          type: number
+          span: auto
+          tab: istheweb.iscorporate::lang.tab.info
+      tax:
+          label: istheweb.iscorporate::lang.labels.tax
+          type: number
+          span: auto
+          tab: istheweb.iscorporate::lang.tab.info
+      total:
+          label: istheweb.iscorporate::lang.labels.total
+          type: number
+          span: auto
+          tab: istheweb.iscorporate::lang.tab.info
+      project_types_section:
+          label: istheweb.iscorporate::lang.project_type.label
+          type: section
+          comment: istheweb.iscorporate::lang.project_type.comment
+          tab: istheweb.iscorporate::lang.project.label
+      project_types:
+          label: istheweb.iscorporate::lang.project_types.menu_label
+          type: partial
+          path: field_project_types
+          tab: istheweb.iscorporate::lang.project.label
+      options_section:
+          label: istheweb.iscorporate::lang.options.menu_label
+          type: section
+          comment: istheweb.iscorporate::lang.options.comment
+          tab: istheweb.iscorporate::lang.project.label
+      options:
+          type: partial
+          path: field_options
+          tab: istheweb.iscorporate::lang.project.label
+      variants_section:
+          label: istheweb.iscorporate::lang.variants.menu_label
+          type: section
+          comment: istheweb.iscorporate::lang.variants.comment
+          tab: istheweb.iscorporate::lang.project.label
+      variants:
+          type: partial
+          path: field_variants
+          context: update
+          tab: istheweb.iscorporate::lang.project.label

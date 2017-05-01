@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Project
+
+# Model Form Field configuration
+form: $/istheweb/iscorporate/models/project/fields.yaml
+
+# Model Class name
+modelClass: Istheweb\IsCorporate\Models\Project
+
+# Default redirect location
+defaultRedirect: istheweb/iscorporate/projects
+
+# Create page
+create:
+    title: istheweb.iscorporate::lang.project.create_title
+    redirect: istheweb/iscorporate/projects/update/:id
+    redirectClose: istheweb/iscorporate/projects
+
+# Update page
+update:
+    title: istheweb.iscorporate::lang.project.update_title
+    redirect: istheweb/iscorporate/projects
+    redirectClose: istheweb/iscorporate/projects
+
+# Preview page
+preview:
+    title: istheweb.iscorporate::lang.project.preview_title

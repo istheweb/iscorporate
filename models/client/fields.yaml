@@ -1,0 +1,68 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+secondaryTabs:
+  fields:
+      company:
+          label: istheweb.iscorporate::lang.fields.company
+          #type: partial
+          #path: field_company
+          #type: project_company
+          type: recordfinder
+          list: $/istheweb/connect/models/company/columns.yaml
+          nameFrom: name
+          tab: istheweb.iscorporate::lang.fields.company
+      actividad:
+        label: istheweb.iscorporate::lang.fields.activity
+        span: auto
+        tab: istheweb.iscorporate::lang.fields.content
+      url:
+        label: istheweb.iscorporate::lang.fields.url
+        span: auto
+        tab: istheweb.iscorporate::lang.fields.content
+      forma_pago:
+        label: istheweb.iscorporate::lang.fields.payment_method
+        span: auto
+        tab: istheweb.iscorporate::lang.fields.content
+      observaciones:
+        label: istheweb.iscorporate::lang.fields.notes
+        type: richeditor
+        size: huge
+        span: auto
+        tab: istheweb.iscorporate::lang.fields.content
+      estado:
+        label: istheweb.iscorporate::lang.fields.state
+        span: auto
+        type: switch
+        comment: istheweb.iscorporate::lang.fields.state_comment
+        tab: istheweb.iscorporate::lang.fields.content
+      budgets:
+          label: istheweb.iscorporate::lang.budgets.menu_label
+          type: partial
+          path: field_budget
+          tab: istheweb.iscorporate::lang.budgets.menu_label
+          context: update
+      projects:
+          label: istheweb.iscorporate::lang.projects.menu_label
+          type: partial
+          path: field_project
+          tab: istheweb.iscorporate::lang.projects.menu_label
+          context: update
+      banco:
+        label: istheweb.iscorporate::lang.fields.bank
+        span: auto
+        tab: istheweb.iscorporate::lang.fields.bank
+      sucursal:
+        label: istheweb.iscorporate::lang.fields.branch_office
+        span: auto
+        tab: istheweb.iscorporate::lang.fields.bank
+      dc:
+        label: istheweb.iscorporate::lang.fields.dc
+        span: auto
+        tab: istheweb.iscorporate::lang.fields.bank
+      cuenta:
+        label: istheweb.iscorporate::lang.fields.account
+        span: auto
+        tab: istheweb.iscorporate::lang.fields.bank
+        #path: field_company
+

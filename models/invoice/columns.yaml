@@ -1,0 +1,27 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    invoice_number:
+        label: istheweb.iscorporate::lang.labels.invoice_number
+        type: number
+        searchable: true
+    budget[motivo]:
+        label: istheweb.iscorporate::lang.labels.reason
+        searchable: true
+    client[company]:
+        label: istheweb.iscorporate::lang.client.label
+        searchable: true
+        type: client_name
+    status:
+        label: istheweb.iscorporate::lang.toolbar.status
+        type: partial
+        path: ~/plugins/istheweb/iscorporate/models/invoice/_state_column.htm
+    invoice_date:
+        label: istheweb.iscorporate::lang.labels.invoice_date
+        type: date
+    total:
+        label: istheweb.iscorporate::lang.labels.total
+        type: number
+

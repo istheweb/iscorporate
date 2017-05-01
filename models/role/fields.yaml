@@ -1,0 +1,16 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: istheweb.iscorporate::lang.labels.name
+        span: auto
+    description:
+        label: istheweb.iscorporate::lang.labels.description
+        span: auto
+    employees:
+        label: istheweb.iscorporate::lang.employees.menu_label
+        type: partial
+        path: field_employees
+        span: auto

@@ -1,0 +1,41 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+
+    id:
+        label: istheweb.iscorporate::lang.fields.id
+        searchable: true
+
+    subject:
+        label: istheweb.iscorporate::lang.fields.subject
+        searchable: true
+
+    creator:
+        label: istheweb.iscorporate::lang.toolbar.owner
+        relation: creator
+        select: concat(first_name, ' ', last_name)
+
+    status:
+        label: istheweb.iscorporate::lang.fields.status
+        relation: status
+        select: name
+
+    type:
+        label: istheweb.iscorporate::lang.fields.type
+        relation: type
+        select: name
+
+    is_closed:
+        label: istheweb.iscorporate::lang.fields.is_closed
+        type: switch
+
+    created_at:
+        label: istheweb.iscorporate::lang.fields.created_at
+        type: datetime
+
+    updated_at:
+        label: istheweb.iscorporate::lang.fields.updated_at
+        type: datetime
+        invisible: true
