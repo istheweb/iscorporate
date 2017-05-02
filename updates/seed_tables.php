@@ -174,69 +174,71 @@ class SeedProjectTypeOptions extends Seeder
                 $user = User::create($user);
                 $users->add($user);
             }
-        }
 
-        $connectGroup = UserGroup::whereCode(Employee::USER_GROUP_CODE)->first();
+            $connectGroup = UserGroup::whereCode(Employee::USER_GROUP_CODE)->first();
 
-        if(is_null($connectGroup)){
+            if(is_null($connectGroup)){
 
-            $connect_permissions = [
-                "media.manage_media"                            => "1",
-                "backend.manage_preferences"                    => "1",
-                "system.access_logs"                            => "1",
-                "system.manage_mail_settings"                   => "1",
-                "system.manage_mail_templates"                  => "1",
-                "istheweb.ispdf.manage_layouts"                 => "1",
-                "istheweb.ispdf.manage_templates"               => "1",
-                "istheweb.connect.subscribers"                  => "1",
-                "istheweb.connect.events"                       => "1",
-                "istheweb.connect.contacts"                     => "1",
-                "istheweb.connect.inboxes"                      => "1",
-                "istheweb.iscorporate.access_projects"          => "1",
-                "istheweb.iscorporate.access_employees"         => "1",
-                "istheweb.iscorporate.access_clients"           => "1",
-                "istheweb.iscorporate.access_budgets"           => "1",
-                "istheweb.iscorporate.access_invoices"          => "1",
-                "istheweb.iscorporate.access_providers"         => "1",
-                "istheweb.iscorporate.create_projects"          => "1",
-                "istheweb.iscorporate.delete_projects"          => "1",
-                "istheweb.iscorporate.access_project_types"     => "1",
-                "istheweb.iscorporate.access_options"           => "1",
-                "istheweb.iscorporate.access_issues"            => "1",
-                "istheweb.iscorporate.access_other_issues"      => "1",
-                "istheweb.iscorporate.access_issue_types"       => "1",
-                "istheweb.iscorporate.access_issue_statuses"    => "1",
-                "istheweb.iscorporate.access_reports"           => "1"
-            ];
+                $connect_permissions = [
+                    "media.manage_media"                            => "1",
+                    "backend.manage_preferences"                    => "1",
+                    "system.access_logs"                            => "1",
+                    "system.manage_mail_settings"                   => "1",
+                    "system.manage_mail_templates"                  => "1",
+                    "istheweb.ispdf.manage_layouts"                 => "1",
+                    "istheweb.ispdf.manage_templates"               => "1",
+                    "istheweb.connect.subscribers"                  => "1",
+                    "istheweb.connect.events"                       => "1",
+                    "istheweb.connect.contacts"                     => "1",
+                    "istheweb.connect.inboxes"                      => "1",
+                    "istheweb.iscorporate.access_projects"          => "1",
+                    "istheweb.iscorporate.access_employees"         => "1",
+                    "istheweb.iscorporate.access_clients"           => "1",
+                    "istheweb.iscorporate.access_budgets"           => "1",
+                    "istheweb.iscorporate.access_invoices"          => "1",
+                    "istheweb.iscorporate.access_providers"         => "1",
+                    "istheweb.iscorporate.create_projects"          => "1",
+                    "istheweb.iscorporate.delete_projects"          => "1",
+                    "istheweb.iscorporate.access_project_types"     => "1",
+                    "istheweb.iscorporate.access_options"           => "1",
+                    "istheweb.iscorporate.access_issues"            => "1",
+                    "istheweb.iscorporate.access_other_issues"      => "1",
+                    "istheweb.iscorporate.access_issue_types"       => "1",
+                    "istheweb.iscorporate.access_issue_statuses"    => "1",
+                    "istheweb.iscorporate.access_reports"           => "1"
+                ];
 
-            $permissions = json_encode($connect_permissions);
+                $permissions = json_encode($connect_permissions);
 
-            $connect = new UserGroup();
-            $connect->name = 'Connect Group';
-            $connect->created_at = Carbon::now();
-            $connect->updated_at = Carbon::now();
-            $connect->code = 'connect';
-            $connect->description = 'Default connect group';
-            $connect->is_new_user_default = 0;
-            $connect->setPermissionsAttribute($permissions);
-            $connectGroup = $connect->save();
+                $connect = new UserGroup();
+                $connect->name = 'Connect Group';
+                $connect->created_at = Carbon::now();
+                $connect->updated_at = Carbon::now();
+                $connect->code = 'connect';
+                $connect->description = 'Default connect group';
+                $connect->is_new_user_default = 0;
+                $connect->setPermissionsAttribute($permissions);
+                $connectGroup = $connect->save();
 
-            $connect_user = User::whereLogin('aconnect')->first();
-            if(!$connect_user->inGroup($connectGroup)){
-                $connect_user->addGroup($connectGroup);
-            }
-
-            foreach($users as $user) {
-                if ($user->inGroup($connectGroup)) {
-                    $empleado = new Employee();
-                    $empleado->user = $user;
-                    $empleado->created_at = Carbon::now();
-                    $empleado->updated_at = Carbon::now();
-                    $empleado->save();
+                $connect_user = User::whereLogin('aconnect')->first();
+                if(!$connect_user->inGroup($connectGroup)){
+                    $connect_user->addGroup($connectGroup);
                 }
+
+                foreach($users as $user) {
+                    if ($user->inGroup($connectGroup)) {
+                        $empleado = new Employee();
+                        $empleado->user = $user;
+                        $empleado->created_at = Carbon::now();
+                        $empleado->updated_at = Carbon::now();
+                        $empleado->save();
+                    }
+                }
+
             }
 
         }
+
 
         $budget_layout = Layout::whereCode('iscorporate-budgets')->first();
 
