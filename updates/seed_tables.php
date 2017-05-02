@@ -221,21 +221,21 @@ class SeedProjectTypeOptions extends Seeder
             $connect->setPermissionsAttribute($permissions);
             $connectGroup = $connect->save();
 
-        }
-
-        $connect_user = User::whereLogin('aconnect')->first();
-        if(!$connect_user->inGroup($connectGroup)){
-            $connect_user->addGroup($connectGroup);
-        }
-
-        foreach($users as $user) {
-            if ($user->inGroup($connectGroup)) {
-                $empleado = new Employee();
-                $empleado->user = $user;
-                $empleado->created_at = Carbon::now();
-                $empleado->updated_at = Carbon::now();
-                $empleado->save();
+            $connect_user = User::whereLogin('aconnect')->first();
+            if(!$connect_user->inGroup($connectGroup)){
+                $connect_user->addGroup($connectGroup);
             }
+
+            foreach($users as $user) {
+                if ($user->inGroup($connectGroup)) {
+                    $empleado = new Employee();
+                    $empleado->user = $user;
+                    $empleado->created_at = Carbon::now();
+                    $empleado->updated_at = Carbon::now();
+                    $empleado->save();
+                }
+            }
+
         }
 
         $budget_layout = Layout::whereCode('iscorporate-budgets')->first();
